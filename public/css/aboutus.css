@@ -1,0 +1,208 @@
+#includeFooter{padding-top: 0px!important;}
+
+body {
+  color:black;
+  background-color: white;
+  margin: 0px;
+  width: 100%;
+}
+
+
+/* Navbar container */
+@font-face {
+  font-family: Gotham;
+  src: url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.eot");
+  src: url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.svg#iCiel Gotham Medium")format("svg");
+}
+
+.navbar {
+overflow: hidden;
+background-color:#132D46;
+font-family:'Gotham';
+}
+
+/* Body text */
+@font-face {
+  font-family: Abril;
+  src: url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.eot");
+  src: url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/4abc7b446177a4b533468cd3635fe0b6.svg#Abril Fatface")format("svg");
+}
+
+@font-face {
+  font-family: "Google Sans Text Regular";
+  src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+  src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+}
+
+@keyframes fade {
+  0%{ opacity: 0;}
+  0%{font-size: 2.5em;}
+  50%{opacity: 0.5;} 
+  100%{ opacity: 1;}
+  100%{font-size: 3.5em;}
+}
+
+div#gameimg img{
+  height:80%;
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
+
+table.top {
+  width:100%;
+  margin:0 auto;
+}
+
+.toppest {
+  width:85%;
+  margin:0 auto;
+}
+
+.toppest h1 {
+  font-size: 3.5em;
+  font-family: Abril;
+  letter-spacing: 2px;
+  text-align: center;
+  quotes: '\201C' '\201D';
+  animation: fade 2s ease-in;
+  border-bottom: 3px solid black;
+}
+
+.toppest h1::before{
+font-weight: bold;
+font-size: 2.4em;
+font-family: Abril;
+content: open-quote;
+}
+
+.toppest h1::after{
+font-weight: bold;
+font-size: 2.4em;
+font-family: Abril;
+content: close-quote;
+}
+
+img#logo {
+display: block;
+float: left;
+padding-left: 10%;
+padding-top:10px;
+}
+
+.History {
+  padding-bottom: 40px;
+}
+.History > h1 {
+margin-left: 10%;
+font-family: "Google Sans Text Regular";
+}
+
+.History > p {
+margin-left: 10%;
+margin-right: 10%;
+display: block;
+overflow: hidden;
+font-size: 16px;
+font-family: "Google Sans Text Regular";
+line-height: 30px;
+word-spacing: 1px;
+letter-spacing: 1px;
+}
+
+.History > p::first-letter {
+font-size: 24px;
+font-weight: bold;
+}
+
+table.bottom {
+width:70%;
+margin:0 auto;
+padding-top:50px;
+padding-bottom:50px;
+}
+
+.Service {
+  background-color: black;
+  color:white;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.Service > h1 {
+margin-left: 36%;
+font-family: "Google Sans Text Regular";
+}
+
+.Service > p {
+margin-left: 36%;
+margin-right: 10%;
+display: block;
+overflow: hidden;
+font-size: 14px;
+font-family: "Google Sans Text Regular";
+line-height: 30px;
+word-spacing: 1px;
+letter-spacing: 1px;
+}
+
+td.ExInfoCell {
+  width: 45%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.ExInfo > h1 {
+  font-family: "Google Sans Text Regular";
+    display: block;
+    text-align: center;
+    }
+
+
+.ExInfo > p {
+  display: block;
+  font-size: 16px;
+  font-family: "Google Sans Text Regular";
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-align: center;
+}
+
+table.last {
+  width:100%;
+}
+
+.bottomer {
+  padding-top:50px;
+  padding-bottom:30px;
+  text-align: center;
+  background-color: black;;
+}
+
+.bottomer > p {
+  font-size: 16px;
+  font-family: "Google Sans Text Regular";
+  letter-spacing: 1px;
+  line-height: 25px;
+  color:white;
+}
+
+.bottomer iframe {
+  margin: 0 auto; 
+}
+.footerBlank{
+  height: 100px;
+  width:100%;
+}
+

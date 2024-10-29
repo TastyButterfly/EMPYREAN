@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+ }
+ #includeFooter{padding-top: 0px!important;}
+*:not(.navbar *,footer *,.input-field *){
+    margin:0;
+    padding:0;
+    font-family:'Google Sans Text Regular', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(background.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative; 
+}
+
+.signup-box{
+    height:90;
+    max-height: 600px;
+    width:100%;
+    max-width:450px;
+    position:absolute;
+    bottom:50%;
+    left:50%;
+    transform: translate(-50%,50%);
+    background: white;
+    padding:50px 60px 70px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 15px 10px rgba(255,255,255,0.3);
+}
+
+.signup-box h1
+{
+    font-size:30px;
+    margin-bottom:50px;
+    color:#3c00a0;
+    position:relative;
+}
+
+.signup-box h1::after
+{
+content:'';
+width:30px;
+height:4px;
+border-radius:3px;
+background:#3c00a0;
+position:absolute;
+bottom:-12px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.input-field{
+ background:#eaeaea;
+ margin: 15px 0px;
+ border-radius:3px;
+ display:flex;
+ align-items:center;
+ max-height: 65px;
+}
+
+input{
+    width:100%;
+    background:transparent;
+    border:0;
+    outline:0;
+    padding:18px 15px;
+}
+
+.input-field p,.input-field img{
+margin-left:15px;
+color:#999
+}
+
+form p#message{
+    text-align:left;
+    font-size: 13px;
+}
+
+form p#message a{
+    text-decoration:none;
+    color:#3c00a0;
+}
+
+.button-field{
+    width: 100%;
+    vertical-align: center;
+}
+
+.button-field button{
+    margin:10px;
+    background:#3c00a0;
+    color:white;
+    height:40px;
+    width:160px;
+    border-radius: 20px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: transform .3s;
+}
+
+.button-field button:hover{
+   transform: scale(1.25);
+}
+
+.input-group{
+    height:280px;
+}

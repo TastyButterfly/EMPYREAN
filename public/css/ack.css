@@ -1,0 +1,84 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    font-family:'Gotham';
+    font-size:40px;
+    color:black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body{
+    margin: 0px;
+    background-color:whitesmoke;
+  }
+  .sec{
+    padding-left:4%;
+    font:72px 'Gotham';
+    color:#095CE6;
+    margin: 50px 50px 50px 0px;
+  }
+  .subsec{
+    padding-left: 4%;
+    font:48px 'Gotham';
+    color:#095CE6;
+    margin: 0px;
+  }
+  .para{
+    font: 20px "G Sans";
+    padding:2% 6%;
+    color: white;
+    word-spacing: 1.0px;
+  }
+  .rtl{text-align:right;}
+  .title{display: flex;justify-content: space-between;}
+  .reveal.rtl{
+    position: relative;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1.5s all ease;
+  }
+  .reveal.ltr{
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1.5s all ease;
+  } 
+  .reveal.ltr.active,.reveal.rtl.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .reveal.up{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .pbg.active{
+    background-color: #182841;
+    transition: 0.75s ease;
+  }
+  .reveal.up.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .num{
+    font: bold 250px 'Gotham';
+    text-align: right;
+    margin: 20px 70px 20px 20px;
+    color: #182841;
+  }
+  .reveal.scroll{
+    display: inline-block;
+    font: bold 80px 'Gotham';
+    text-align: center;
+    color: #182841;
+    transform: translateX(43%) translateY(200%);
+  }
+  .reveal.scroll.active{
+    display:none;
+  }

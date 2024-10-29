@@ -1,0 +1,163 @@
+body {
+    color:black;
+    background-color: white;
+    margin: 0px auto;
+    width: 100%;
+  }
+
+
+
+.top h1{
+    font-size: 70px;
+    font-family: "Google Sans Text Regular"; 
+    text-align: center;
+    margin-top:100px;
+    padding-left: 100px;
+    padding-right: 80px;
+}
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+}
+
+p{
+    font-family: "Google Sans Text Regular";
+    text-align: center;
+    margin:30px;
+    font-size:20px;
+    padding-left: 100px;
+    padding-right: 80px;
+}
+
+p#secondline{
+    margin-bottom: 50px;
+}
+
+
+p:first-of-type{
+    
+    padding-top: 30px;
+}
+
+@font-face {
+    font-family: Space;
+    src: url(../fonts/SpaceCrusaders-x3DP0.ttf);
+}
+
+@font-face {
+    font-family: SpaceTalics;
+    src: url(../fonts/SpaceCrusadersItalic-ZV1Zx.ttf);
+}
+
+@font-face {
+    font-family: Spaces;
+    src: url(../fonts/Arvo-Bold.ttf) format(truetype);
+}
+
+table{
+    width:900px;
+    padding-right: 80px;
+
+}
+
+table.first {
+    margin:0 auto;
+    text-align:center;
+}
+
+.result {
+    float:left;
+    margin-left:7%;
+    margin-top: 20px;;
+}
+
+td{
+    
+    width: 30%;
+}
+
+.subPlan{
+    text-align: center;
+    margin-left: 40px;
+
+}
+
+.subPlan h1{
+    font-size: 3em;
+    font-family: Space;
+}
+
+label {
+    font-size: 1.20em;
+    font-family: Spaces;
+    text-align: center;
+    padding-left: 10px;
+} 
+
+.sub {
+    margin-top: 50px;
+    margin-left: 100px;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 10px;
+    height: 46px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sub img {
+    position:absolute;
+    top:-25px;
+    left:-25px;
+    rotate: -10deg;
+}
+
+button {
+    margin: 50px 0px 20px 85px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px;     
+    margin-left:80px;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+input[type="submit"] {
+    background:#241571;
+    color:white;
+    height:50px;
+    width:200px;
+    border-radius: 40px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: background 1s;
+    font-size: large;
+    transition: transform .3s; /* Animation */
+
+ }
+ 
+ input[type="submit"]:hover{
+    transform: scale(1.25);
+    box-shadow: 15px -10px gray;
+    font-weight: bold;
+ }
+

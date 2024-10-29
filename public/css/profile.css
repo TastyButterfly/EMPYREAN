@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+ }
+
+ #includeFooter{padding-top: 0px!important;} 
+
+*:not(.navbar *,footer *){
+    margin:0;
+    padding:0;
+    font-family:'Google Sans Text Regular', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(18, 18, 72, 0.8),rgba(18, 18, 72, 0.8)), url(profilebg.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative; 
+}
+
+.profile-box{
+    width:100%;
+    height:80%;
+    max-width:450px;
+    position:absolute;
+    bottom:50%;
+    left:30%;
+    transform: translate(-50%,50%);
+    background: white;
+    padding:50px 50px 70px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.profile-box div#custInfo p#proName,p#proEmail,p#status
+{
+    background-color: beige;
+    border-radius: 10px;
+    height:28px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+h1 
+{
+    text-align: left;
+    font-size: 20px;
+}
+img#profilepic
+{
+    border-radius:50%;
+    height:200px;
+    width:200px;
+    
+}
+
+div#custInfo
+{
+    text-align: left;
+}
+
+div#custInfo div
+{
+    margin:15px;
+}
+
+.subscription-box{
+    width:100%;
+    height:35%;
+    max-width:450px;
+    position:absolute;
+    bottom:69%;
+    left:65%;
+    transform: translate(-50%,50%);
+    background: white;
+    padding:50px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.subscription-box p{
+    margin:20px;
+    padding:10px;
+    height:40px;
+    border-radius: 30px;
+    background-color: beige;
+}
+
+.subscription-box div{
+    width:90%;
+    height:70%;
+    overflow: auto;
+}
+
+.bill-box{
+    width:100%;
+    height:35%;
+    max-width:450px;
+    position:absolute;
+    bottom:30%;
+    left:65%;
+    transform: translate(-50%,50%);
+    background: white;
+    padding:50px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.bill-box div{
+    width:90%;
+    height:70%;
+    overflow: auto;
+}
+
+.bill-box button{
+    margin:10px;
+    padding:10px;
+    border-radius:20px;
+    background-color: #241571;
+    border: none;
+    color:white; 
+    transition: transform .3s;
+    
+}
+
+.bill-box button:hover{
+   transform: scale(1.25);
+   box-shadow: 5px -5px gray;
+}
+
+
+
+

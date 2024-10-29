@@ -1,0 +1,158 @@
+@charset "utf-8";
+@font-face {
+    font-family: NotoSans;
+    src: url(NotoSans-SemiBold.ttf);
+    /*src: url(zh-cn.tff);*/
+}
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+  }
+
+  #includeFooter{padding-top: 0px!important;} 
+  *:not(.navbar *,footer *){
+    font-family:"Google Sans Text Regular" ;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*:not(.navbar *,footer *){
+    padding:0px;
+    margin:0px;
+    font-family: "Google Sans Text Regular";
+}
+/*genshin page*/
+.container{
+    position: relative;
+}
+.container video{
+    width: 100%;
+    height: 100%;
+}
+.text-block{
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 500px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-top: 100px 20px 5px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/*assassins creed page*/
+.descripbox{
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 620px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 75px;;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+/*crysis page*/
+div img#crysispic{
+    opacity: 0.6;
+    width: 100%;
+    height:100;
+}
+.descriptbox2 {
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 600px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+/*valorant page*/
+div.descripvalorant{
+    background-image: url('valorant-description-2.jpg');
+    background-repeat: no-repeat;
+    height:800px;
+}
+
+div img.logo{
+    padding-left: 220px;
+}
+div.valorantbox{
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 600px;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+/*fortnite page*/
+div.descripfortnite{
+    background-image: url(fortnite-descrip.jpg);
+    height: 800px;
+}
+div.fortnitebox{
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 700px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+/*minecraft page*/
+div.minecraftbox{
+    background-color: hsla(0, 0%, 100%, 0.7);
+    height: 100%;
+    width: 700px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    top: 0;
+    /*font setting*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+

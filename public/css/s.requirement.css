@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://db.onlinewebfonts.com/c/9a2bc11be56851dde98c1b49302cc21a?family=Gotham+Medium');
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+}
+
+html{
+    background: white;
+	font-family: "Google Sans Text Regular";
+}
+
+body{
+    width: 100%;
+    margin-left: auto;/*centralise page*/
+    margin-right: auto;
+	min-height: 100%;
+}
+
+table{
+	padding: 20px;
+	font-size: 25px;
+	font-family: "Gotham Medium";
+}
+
+article p{
+	font-size: 20px;
+	font-family: "Google Sans Text Regular";
+	font-style: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+a:link{
+	color: black;
+}
+
+a:hover{
+	color:rgb(0, 0, 205);
+}
+
+.bigtitle{
+	text-align: center;
+	letter-spacing: 4px;
+	font-size: 30px;
+	padding: 40px;
+	font-family: "Google Sans Text Regular";
+}
+
+body h1 {
+	margin: 1%;
+    font-family: "Gotham Medium";
+	font-size: 1.5em;
+}
+
+body article h1 {
+	font-size: 1.15em;
+}
+
+article{
+	margin: 0px 150px 0px 50px;
+}
+
+dl {
+	margin-left: 2%;
+}
+
+dt {
+	display: block;
+	margin: 0;
+	text-indent: 0;
+	font-weight: bold;
+	border-bottom: 1px solid rgba(168, 168, 168,1.00);
+    font-family: "Gotham Medium";
+	font-size: 22px;
+	margin: 0px 100px 0px 50px;
+}
+
+dd {
+	display: block;
+	margin: 0 0 3% 3%;
+	text-indent: 0;
+	font-family: "Google Sans Text Regular";
+	line-height: 3;
+	margin: 0px 100px 0px 50px;
+	font-size: 20px;
+}
+
+ul li{
+	line-height: 2;
+	margin: 0px 100px 0px 50px;
+}

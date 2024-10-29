@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+ }
+    
+*:not(.navbar *,footer *){
+font-family:'Google Sans Text Regular', sans-serif;}
+
+html{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+div.title h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-weight: 700;
+    padding: 38px 0 6px;
+    text-align: center;
+}
+
+/*gameplay*/
+.image-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.gameplay {
+    vertical-align: middle;
+}
+
+div p#info{
+    font-size: 20px;
+}
+h1#party-game{
+    text-align: center;
+    font-size: 35px;
+}
+/*dots*/
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #eeefef;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+} 
+h1#passes{
+    font-size:35px;
+    float: left;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+table:not(.navbar *,footer *){
+    border: none;
+    padding-left: 70px;
+    border-collapse: separate;
+    border-spacing: 100px;
+    clear: both;
+}
+table.threePasses td{
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+table.threePasses td h3{
+    font-size: 25px;
+}
+input.click{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #241571;
+    color:white;
+    border: #01C38D;
+    width: 80px;
+    height: 40px;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+input.click:hover{
+    background-color: #a67dd1;
+    border: 1px grey solid;
+}
+.rectangle{
+    background-color:whitesmoke;
+    width:250px;
+    height: 330px;
+    border-radius: 10px;
+    padding:10px;
+}
+.rectangle:hover{
+    transform: scale(1.05) translateY(-10px);
+    transition: 0.5s ease;
+}
+
+footer td{
+    text-align: left;
+}
+
+#company{
+    text-align: left;
+}

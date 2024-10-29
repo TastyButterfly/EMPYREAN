@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+}
+
+@font-face {
+    font-family: Space;
+    src: url(../fonts/SpaceCrusaders-x3DP0.ttf) format(truetype);
+}
+
+body {
+    background-color: #f6f6f6e3;
+    margin:0;
+    padding:0;
+}
+
+p {
+    font-family:"Google Sans Text Regular";
+    text-align: center;
+}
+
+.only{
+    color:green;
+    font-weight: bold;
+}
+
+.line p{
+    height:10px;
+    padding:0;
+    margin:0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+.container img {
+    padding-bottom: 10px;;
+}
+
+table.first {
+    width:450px;
+    background-color: white;
+    margin:0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding:10px;
+}
+
+.first{
+    justify-content: center;
+    align-items:center;
+}
+
+.customerInfo {
+    width:270px;
+    padding: 5px;
+}
+
+.prod {
+    width:270px;
+    padding:5px;
+}
+
+.info {
+    width:270px;
+    padding:5px;
+}
+.product {
+    float:left;
+    margin-left:50px;
+    margin-top:10px;
+    height:5px;
+    font-weight: bold;
+}
+
+.product2 {
+    float:left;
+    margin-left:50px;
+    margin-top:15px; 
+}
+
+.price {
+    float:right;
+    margin-right:108px;
+    margin-top:10px;
+    height:5px;
+    font-weight: bold;
+}
+
+.price2 {
+    float:right;
+    margin-right:50px;
+    margin-top:15px;
+}
+
+.thanks p{
+    font-size:40px;
+    font-family: Space;
+}
