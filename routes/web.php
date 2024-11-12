@@ -6,6 +6,7 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DiscountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,9 +101,10 @@ Route::get('/receipt', [PaymentController::class, 'showReceipt'])->name('receipt
 Route::get('/payments/success', [PaymentController::class, 'success'])->name('payments.success');
 
 //CANCEL BUTTON ROUTES
-Route::get('/user/cancel', [UserController::class, 'cancel'])->name('users.cancel');
-Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payments.cancel');
-Route::get('/subscription/cancel', [SubscriptionController::class, 'cancel'])->name('subscriptions.cancel');
+Route::get('/discounts/cancel', [DiscountController::class, 'cancel'])->name('discounts.cancel');
+Route::get('/users/cancel', [UserController::class, 'cancel'])->name('users.cancel');
+Route::get('/payments/cancel', [PaymentController::class, 'cancel'])->name('payments.cancel');
+Route::get('/subscriptions/cancel', [SubscriptionController::class, 'cancel'])->name('subscriptions.cancel');
 Route::get('/receipt', [PaymentController::class, 'showReceipt'])->name('receipt');
 Route::get('/viewReceipt/{subscription}', [SubscriptionController::class, 'viewReceipt'])->name('viewReceipt');
 
@@ -112,6 +114,7 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('subscriptions',SubscriptionController::class);
     Route::resource('payments',PaymentController::class);
     Route::resource('sessions',SessionController::class);
+    Route::resource('discounts',DiscountController::class);
     Route::get('/admin', function(){return view('adminDashboard');})->name('admin');
     Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admins.logout');
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admins.profile');

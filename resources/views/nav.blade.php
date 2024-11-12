@@ -22,7 +22,7 @@
 <body style="margin:0px 0px 0px 0px;"><div class="navbar">
     <a href="{{ url('/') }}"><img src="/media/image.png" width="52px" height="50px"></a>
     <a href="{{ url('/') }}">EMPYREAN</a>
-    @if(Route::currentRouteName()=='home'||Route::currentRouteName()=='users.index'||Route::currentRouteName()=='payments.index'||Route::currentRouteName()=='subscriptions.index'||Route::currentRouteName()=='subscribe'||Route::currentRouteName()=='profile')
+    @if(Route::currentRouteName()=='home'||Route::currentRouteName()=='users.index'||Route::currentRouteName()=='payments.index'||Route::currentRouteName()=='subscriptions.index'||Route::currentRouteName()=='subscribe'||Route::currentRouteName()=='profile'||Route::currentRouteName()=='discounts.index')
       @if(session('success'))
           <div id="status" style="color: #FFF;">{{session('success')}}</div>
           <script>document.addEventListener('DOMContentLoaded', function() {

@@ -13,12 +13,17 @@ use Illuminate\Support\Facades\Session;
 class UserController extends Controller
 {
     //Display a listing of the resource.
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(15);
-        return view('userDashboard',compact('users'));
-    }
-    
+        $query = User::query();
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->where('email', 'like', "%{$search}%");
+        }
+        $users = $query->paginate(15);
+
+        return view('userDashboard', compact('users'));
+    } 
     public function create()
     {
         return view('createUser');

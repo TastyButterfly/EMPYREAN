@@ -4,13 +4,13 @@
         <link rel="stylesheet" href="/css/showView.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <title>Payment Details</title>
+        <title>Subscription Details</title>
     </head>
     <body>
         @include('nav')
         <div class="container">
             <div class="show-box">
-                <h1>Payment Details</h1>
+                <h1>Subscription Details</h1>
                 <table class="profileTable">
                     <tr>
                         <td><p>Subscription ID:</p>
@@ -42,14 +42,18 @@
                     </tr>  
                     <tr>
                         <td><p>Amount Paid:</p>
-                            <div class=input-field>
-                                <p><i class="fa-solid fa-dollar-sign"></i></p>
-                                @if($subscription->payment)
-                                <p>RM {{$subscription->payment->amount}}</p>
-                                @else
-                                <p>RM 0.00</p>
-                                @endif
-                            </div>
+                            @if($subscription->payment)
+                                <a href="{{route('payments.show',$subscription->payment->id)}}">
+                                <div class=input-field>
+                                    <p><i class="fa-solid fa-dollar-sign"></i></p>
+                                    <p>RM {{$subscription->payment->amount}}</p>
+                                </div></a>
+                            @else
+                                <div class=input-field>
+                                    <p><i class="fa-solid fa-dollar-sign"></i></p>
+                                    <p>RM 0.00</p>
+                                </div>
+                            @endif
                         </td>
                         <td><p>Status:</p>
                             <div class=input-field>

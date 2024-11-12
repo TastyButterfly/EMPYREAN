@@ -15,10 +15,18 @@ use Illuminate\Support\Facades\Auth;
 class SubscriptionController extends Controller
 {
     //Display a listing of the resource.
-    public function index()
+    public function index(Request $request)
     {
-        $subscriptions=Subscription::paginate(15);
-        return view('subDashboard',compact('subscriptions'));
+        $query = Subscription::query();
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->whereHas('user', function ($q) use ($search) {
+                $q->where('email', 'like', "%{$search}%");
+            })->orWhere('plan', 'like', "%{$search}%");
+        }
+
+        $subscriptions = $query->paginate(15);
+        return view('subDashboard', compact('subscriptions'));
     }
     public function create()
     {

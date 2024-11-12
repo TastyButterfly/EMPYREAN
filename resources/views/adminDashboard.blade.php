@@ -22,11 +22,10 @@
             <h1>Payment Dashboard</h1><br>
             <p>Add, modify or delete payments here!</p>
         </button></td>
-        <td><form action="{{route('admins.logout')}}" method="POST">@csrf
-        <button class="dashboard-button gray" type="submit">
-            <h1>Logout</h1><br>
-            <p>Logout and return to the home page.</p>
-        </button></form></td></tr>
+        <td><button class="dashboard-button orange" onclick="window.location.href='{{ route('discounts.index') }}'">
+            <h1>Discounts Dashboard</h1><br>
+            <p>Give, modify or delete discounts here!</p>
+        </button></td></tr>
         </table>
     </body>
     @include('footer')

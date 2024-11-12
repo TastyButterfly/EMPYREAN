@@ -10,6 +10,12 @@
         <div class="buttonContainer">
             <a href="{{ route('subscriptions.create') }}"><button class="button-field add" role="button">Add Subscription</button></a>
         </div>
+        <div class="searchContainer">
+            <form action="{{ route('subscriptions.index') }}" method="GET">
+                <input type="text" name="search" placeholder="Search by email or plan name..." value="{{ request()->query('search') }}">
+                <button type="submit" class="button-field action search">Search</button>
+            </form>
+        </div>
         <table class="mainTable">
             <tr>
                 <th>No.</th>

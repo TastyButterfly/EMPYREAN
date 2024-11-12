@@ -63,16 +63,18 @@
                     @if($subscription)
                     <tr>
                         <td><p>Item Bought:</p>
+                            <a href="{{route('subscriptions.show',$subscription->id)}}">
                             <div class=input-field>
                                 <p><i class="fa-solid fa-cart-shopping"></i></p>
                                 <p>{{$subscription->plan}}</p>
-                            </div>
+                            </div></a>
                         </td>
                         <td><p>Duration:</p>
+                            <a href="{{route('subscriptions.show',$subscription->id)}}">
                             <div class=input-field>
                                 <p><i class="fa-regular fa-clock"></i></p>
                                 <p>{{$subscription->duration}}</p>
-                            </div>
+                            </div></a>
                         </td>
                     </tr> 
                     @endif

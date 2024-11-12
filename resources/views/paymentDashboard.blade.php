@@ -10,6 +10,12 @@
         <div class="buttonContainer">
             <a href="{{ route('payments.create') }}"><button class="button-field add" role="button">Add Payment</button></a>
         </div>
+        <div class="searchContainer">
+            <form action="{{ route('payments.index') }}" method="GET">
+                <input type="text" name="search" placeholder="Search by email..." value="{{ request()->query('search') }}">
+                <button type="submit" class="button-field action search">Search</button>
+            </form>
+        </div>
         <table class="mainTable">
             <tr>
                 <th>No.</th>

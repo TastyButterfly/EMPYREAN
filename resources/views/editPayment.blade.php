@@ -33,7 +33,7 @@
 
             <div class="input-field">
             <p>&#65284;</p>
-            <input type="number" step="0.01" placeholder="Payment Amount" name="amount" id="amount" value="{{old('amount',$payment->amount)}}" required>
+            <input type="number" step="0.01" min="0" placeholder="Payment Amount" name="amount" id="amount" value="{{old('amount',$payment->amount)}}" required>
             </div>
 
             <div class="input-field">

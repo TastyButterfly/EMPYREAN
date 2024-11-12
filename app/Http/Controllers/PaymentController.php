@@ -18,9 +18,19 @@ use Stripe\PaymentMethod;
 class PaymentController extends Controller
 {
     //Display a listing of the resource.
-    public function index()
+    public function index(Request $request)
     {
-        $payments = Payment::paginate(15);
+        $query = Payment::query();
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->whereHas('user', function ($q) use ($search) {
+                $q->where('email', 'like', "%{$search}%");
+            });
+        }
+
+        $payments = $query->paginate(15);
+
         return view('paymentDashboard', compact('payments'));
     }
     public function create()
