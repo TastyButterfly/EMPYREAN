@@ -47,7 +47,7 @@
             <p class="label">Date of Payment:</p>
             <div class="input-field">
                 <label for="payment_date">&#128197;</label>
-                <input type="datetime-local" name="payment_date" id="payment_date" value="{{ old('payment_date',$payment->payment_date) }}"  required>
+                <input type="datetime-local" name="payment_date" id="payment_date" value="{{ old('payment_date', \Carbon\Carbon::parse($payment->payment_date)->format('Y-m-d\TH:i:s')) }}" required>
             </div>
             <div class="input-field">
                 <label for="status">Status:</label>

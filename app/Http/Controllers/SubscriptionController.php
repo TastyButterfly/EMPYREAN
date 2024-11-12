@@ -275,6 +275,11 @@ class SubscriptionController extends Controller
             return view('receipt', compact('payment','price','subscription'));
         }
         $total=$price-$discountRec->discount_price;
+        $discount=[
+            'oldPlan' => $discountRec->plan,
+            'discountPrice' => $discountRec->discount_price,
+            'daysLeft' => $discountRec->daysLeft
+        ];
         return view('receipt', compact('subscription','discount','total','price'));
     }
     public function destroy(Subscription $subscription)
@@ -347,5 +352,8 @@ class SubscriptionController extends Controller
             default:
                 return 0;
         }
+    }
+    public function cancel(){
+        return redirect()->route('subscriptions.index')->with('message','Operation cancelled by user. No changes made.');
     }
 }

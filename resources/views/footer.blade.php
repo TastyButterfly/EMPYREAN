@@ -41,6 +41,13 @@
                     <td onclick="location.href='{{url('/srwindowpc')}}'">Requirements</td>
                     <td onclick="location.href='{{url('/legal')}}'">Legal</a></td>
                 </tr>
+                <tr>
+                    <td class="notd"></td>
+                    @if(Auth::guard('admin')->check())
+                        <td onclick="location.href='{{url('/admin')}}'">Admin Dashboard</td>
+                    @else
+                        <td onclick="location.href='{{url('/admin_sign_in')}}'">Admin Portal</td>
+                    @endif
             </table>
         </div>
     </footer>

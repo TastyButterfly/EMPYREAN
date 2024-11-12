@@ -36,7 +36,7 @@
                         <td><p>Joined Since:</p>
                             <div class=input-field>
                                 <p><i class="fa-regular fa-clock"></i></p>
-                                <p>{{$admin->created_at->format('Y/m/d')}}</p>
+                                <p>{{\Carbon\Carbon::parse($admin->created_at)->format('jS F Y') }}</p>
                             </div>
                         </td>
                     </tr>  

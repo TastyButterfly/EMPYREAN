@@ -66,7 +66,7 @@ class PaymentController extends Controller
             'amount' => 'required',
             'payment_method' => 'required|in:Credit/Debit Card,TnG eWallet',//remember to not add spaces
             'status' => 'required|in:Completed,Pending,Declined',
-            'payment_date' => 'required|date_format:Y-m-d\TH:i',
+            'payment_date' => 'required|date_format:Y-m-d\TH:i:s',
         ]);
         $user = User::where('email', $request->input('email'))->first();
         if (!$user) {
@@ -86,7 +86,18 @@ class PaymentController extends Controller
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         $user = Auth::guard('user')->user();
+        $plan=session('plan');
+        $duration=session('duration');
         $amount = $this->setPrice(['plan' => session('plan'), 'duration' => session('duration')])*100;
+        $existingSubscription = $user->subscriptions()
+            ->where('status', 'Active')
+            ->orderBy('end_date', 'desc')
+            ->first();
+        $existingSubscription = $existingSubscription ?? null;
+        if($existingSubscription!=null && $existingSubscription->plan!=$plan){//if user is changing plans
+            $daysLeft = floor(Carbon::now()->setTimezone('Asia/Singapore')->floatDiffInDays($existingSubscription->end_date, false));
+            $amount-=round($this->setDiscount(['plan' => $existingSubscription->plan, 'daysLeft' => $daysLeft]),2)*100;
+        }
         try {
             // Create a Stripe Checkout Session
             $checkoutSession = StripeSession::create([
@@ -193,8 +204,8 @@ class PaymentController extends Controller
         ]);
         if($existingSubscription!=null && $existingSubscription->plan!=$plan){
             Discount::create([
-                'plan' => $plan,
-                'discount_price' => round($this->setDiscount(['plan' => $plan, 'daysLeft' => $daysLeft]),2),
+                'plan' => $existingSubscription->plan,
+                'discount_price' => round($this->setDiscount(['plan' => $existingSubscription->plan, 'daysLeft' => $daysLeft]),2),
                 'daysLeft' => $daysLeft,
                 'subscription_id' => $subscription->id,
             ]);
@@ -336,5 +347,8 @@ class PaymentController extends Controller
         ];
 
         return $map[$type] ?? 'Unknown';
+    }
+    public function cancel(){
+        return redirect()->route('payments.index')->with('message','Operation cancelled by user. No changes made.');
     }
 }

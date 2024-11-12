@@ -75,8 +75,6 @@
         <a href="{{url('/acknowledgements')}}">Acknowledgements</a>
         @if(Auth::guard('admin')->check())
           <a href="{{url('/admin')}}">Admin Dashboard</a>
-        @else
-        <a href="{{url('/admin_sign_in')}}">Admin Portal</a>
         @endif
       </div>
     </div>
