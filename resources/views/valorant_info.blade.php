@@ -3,11 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Valorant</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
-
+        <link href="/css/link_page.css" rel="stylesheet">
         <style>
             html{
                 zoom: 110%;
@@ -16,12 +12,12 @@
     </head>
 
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="descripvalorant" style="position:relative;">
-            <img src="valorant-description-2.jpg" style="width: 100%;">
+            <img src="/media/valorant-description-2.jpg" style="width: 100%;">
             <div class="valorantbox">
                 <div>
-                    <img class="logo" src="220px-Valorant_logo_-_pink_color_version.svg.png" style="width: 180px; padding-left: 33%; margin-top: 20px;">
+                    <img class="logo" src="/media/220px-Valorant_logo_-_pink_color_version.svg.png" style="width: 180px; padding-left: 33%; margin-top: 20px;">
                 </div>
                 <p style="margin-top: 10px;;">Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, 
                     characters based on several countries and cultures around the world. In the main game mode, players are assigned to either 
@@ -41,7 +37,6 @@
                     moments. Make the play others will imitate for years to come.</p>
             </div>
         </div>
-        
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>

@@ -1,0 +1,191 @@
+body {
+    color:black;
+    background-color: white;
+    margin: 0px auto;
+    width: 100%;
+  }
+
+.top h1{
+    font-size: 70px;
+    font-family: "Google Sans Text Regular"; 
+    text-align: center;
+    margin-top:50px;
+    padding-left: 100px;
+    padding-right: 80px;
+}
+
+@font-face {
+    font-family: "Google Sans Text Regular";
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
+}
+
+p{
+    font-family: "Google Sans Text Regular";
+    text-align: center;
+    margin:10px;
+    font-size:20px;
+    padding: 20px 80px 30px 100px;
+}
+
+@font-face {
+    font-family: SpaceTalics;
+    src: url(../fonts/SpaceCrusadersItalic-ZV1Zx.ttf);
+}
+
+@font-face {
+    font-family: Spaces;
+    src: url(../fonts/Arvo-Bold.ttf) format(truetype);
+}
+
+table{
+    width:900px;
+    padding-right: 80px;
+
+}
+
+table.first {
+    margin:0 auto;
+    text-align:center;
+}
+
+.result {
+    float:left;
+    margin: 25px 7% 15px 7%;
+}
+
+td{
+    width: 30%;
+}
+
+.subPlan{
+    text-align: center;
+    margin-left: 40px;
+
+}
+
+.subPlan h1{
+    font-size: 3em;
+    font-family: Gotham;
+}
+
+label {
+    font-size: 1.20em;
+    font-family: Spaces;
+    text-align: center;
+    padding-left: 10px;
+} 
+
+.sub {
+    margin-top: 50px;
+    margin-left: 100px;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 10px;
+    height: 46px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sub img {
+    position:absolute;
+    top:-25px;
+    left:-25px;
+    rotate: -10deg;
+}
+
+button {
+    margin: 50px 0px 20px 85px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px;     
+    margin-left:80px;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+input[type="submit"] {
+    background:#241571;
+    color:white;
+    height:50px;
+    width:200px;
+    border-radius: 40px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: background 1s;
+    font-size: large;
+    transition: transform .3s; /* Animation */
+
+ }
+ 
+ input[type="submit"]:hover{
+    transform: scale(1.25);
+    box-shadow: 15px -10px gray;
+    font-weight: bold;
+ }
+ input[type="radio"] {
+    display: none;
+}
+/* Create a custom radio button */
+.radio label {
+    position: relative;
+    padding-left: 40px; /* Adjust padding to make space for the custom radio button */
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none; /* Prevent text selection */
+    display: inline-block;
+    line-height: 24px; /* Ensure the label and radio button are vertically aligned */
+}
+
+/* Custom radio button */
+.radio label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px; /* Same size as the label's line-height */
+    height: 21px; /* Same size as the label's line-height */
+    border: 2px solid #3c00a0; /* Border color */
+    border-radius: 50%; /* Make it round */
+    background-color: white; /* Background color */
+    transition: background-color 0.3s, border-color 0.3s; /* Add transition */
+}
+
+/* Inner circle for unchecked state */
+.radio label::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0; /* Initial size of the inner circle */
+    height: 0; /* Initial size of the inner circle */
+    border-radius: 50%;
+    background-color: #3c00a0; /* Inner circle color */
+    border: 0.5px solid white; /* White ring */
+    transition: width 0.3s, height 0.3s; /* Add transition for size */
+}
+
+/* Inner circle for checked state */
+input[type="radio"]:checked + label::after {
+    width: 17px; /* Final size of the inner circle */
+    height: 17px; /* Final size of the inner circle */
+}

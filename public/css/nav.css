@@ -1,12 +1,12 @@
 /* Navbar container */
 @font-face {
-  font-family: Gotham;
-  src: url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.eot");
-  src: url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/dad75e116d32ac74724fb580b024909d.svg#iCiel Gotham Medium")format("svg");
+  font-family: "Gotham";
+  src: url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.eot");
+  src: url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/9a2bc11be56851dde98c1b49302cc21a.svg#Gotham Medium")format("svg");
 }
 @font-face {
   font-family: "G Sans";
@@ -22,11 +22,10 @@
   background-color:#132D46;
   font-family:'Gotham';
 }
-#image{
-  width:55px;
-  height:55px;
+i.nav{
+  font-size:37px;
+  padding: 10px;
 }
-#image i{font-size:32px;padding-top: 10px;}
 /* Links inside the navbar */
 .navbar>a:nth-child(n+3), .dropdown, .dropbtn{
   float:right;
@@ -35,7 +34,7 @@
   color: white;
   text-align: center;
   text-decoration: none;
-  padding: 19px 18px 17px 18px;
+  padding: 20px 18px 20px 18px;
 }
 .navbar>a:nth-child(2){
   font-size:24px;
@@ -55,6 +54,20 @@
   padding:0px;
   float:right;
 }
+.navbar #status{
+  float:left;
+  font-size: 16px;
+  font-weight:50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 17px 18px 19px 38px;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+#status.hide{
+  opacity:0;
+}
 .dropdown{
   padding:0px;
   padding-block: 0px;
@@ -70,7 +83,6 @@
   border: none;
   outline: none;
   color: white;
-  padding: 18px 18px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0px; /* Important for vertical align on mobile phones */
@@ -84,7 +96,7 @@
 #imgdropbtn{
   padding:0px;
 }
-#imgdropdown{transform:translateX(-95px) translateY(50.5px);}
+#imgdropdown{transform:translateX(-95px) translateY(50px);}
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   font-size: 16px;
@@ -95,7 +107,7 @@
   min-width: 150px;
   box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  transform:translateY(50.5px);
+  transform:translateY(51.5px);
 }
 
 
@@ -130,5 +142,25 @@ p#username{
 }
 
 #compadj{
-    transform: translateX(-81.5px) translateY(50.5px);
+    transform: translateX(-82.5px) translateY(51.5px);
+}
+#profilePic{
+  padding:0px;
+  margin: 0px;
+}
+#logout{
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    width:100%;
+    margin:0px;
+    padding: 0px;
+    font:15px Gotham;
+    text-align: left;
+}
+form.logoutForm, form.logoutForm>button{
+    margin:0px;
+    padding:0px;
 }

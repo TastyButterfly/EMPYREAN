@@ -3,26 +3,22 @@
     <head>
         <meta charset="utf-8"/>
         <title>Assassin's Creed</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
-
+        <link href="/css/link_page.css" rel="stylesheet">
         <style>
             html{
-                background-image: url("assassins-creed_descrip.jpg");
+                background-image: url("/media/assassins-creed_descrip.jpg");
                 background-repeat: no-repeat;
                 height: 100%;
             }
         </style>
     </head>
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div>
             <div class="descripbox" style="position:relative">
                 <div>
                 </div>
-                <p style="margin-top: 20px;"> <img class="gif" src="Assassins_Creed_3_Gameplay_segment.gif" style="float: left; margin-right: 15px; "> While playing as the Assassin characters, the games are generally presented from a third-person view in an open world environment, 
+                <p style="margin-top: 20px;"> <img class="gif" src="/media/Assassins_Creed_3_Gameplay_segment.gif" style="float: left; margin-right: 15px; "> While playing as the Assassin characters, the games are generally presented from a third-person view in an open world environment, 
                     focusing on stealth and parkour. The games use a mission structure to follow the main story, assigning the player to complete an 
                     assassination of public figureheads or a covert mission. Alternatively, several side missions are available, such as mapping out 
                     the expansive cities from a high perch followed by performing a leap of faith into a haystack below, collecting treasures hidden 
@@ -38,6 +34,6 @@
                     set in a bracer on the Assassin's arm, which can be used to perform surreptitious assassinations.</p> 
             </div>
         </div>
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>

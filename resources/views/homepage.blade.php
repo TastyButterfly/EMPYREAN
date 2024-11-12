@@ -3,9 +3,7 @@
     <head>
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="stylesheet" href="../css/home_style.css">
-    {{--<script type="text/javascript" src="../js/jquery.js"></script>
-    <script src="../js/include.js" type="text/javascript"></script>--}}
-    <script src="../js/account.js"></script>
+    <script src="/js/account.js"></script>
     <title>EMPYREAN</title>
     </head>
 <body>
@@ -51,7 +49,6 @@
 
 </div>
 </section>  
-
 <script>
   let slideIndex = 0;
   showSlides();
@@ -131,7 +128,7 @@ share a link to collaborate or play co-op games with your friends.
 
 <section id="onAllDevice">
   <div id="devices">
-  <h1>Cloud Gaming on All Your Device</h1>
+  <h1>Cloud Gaming on All Your Devices</h1>
   <p style="font-size: 20px;"><b><i>EMPYREAN</i></b> instantly transforms nearly any laptop, desktop, Mac, SHIELD TV, Android device, iPhone, or iPad into the 
     PC gaming rig you've always dreamed of. Play the most demanding PC games and seamlessly play across your devices.</p>
   </div>
@@ -191,7 +188,6 @@ share a link to collaborate or play co-op games with your friends.
   </div>
   </section>
 </div>
-<div class="footerBlank"></div>
 @include('footer')
 </body>
 </html>

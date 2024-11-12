@@ -2,77 +2,74 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="/css/profile.css">
         <title>Empyrean Profile</title>
-        <script src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <script src="/js/buyingPass.js"></script>
     </head>
     <body>
     
-    <div class="container" onload="profile()">
-        <div id="includeNav"></div>
+    <div class="container">
+    @include('nav')
     <div class="profile-box">
         <h1>User Profile:</h1>
-
+        <form method='GET' action="{{route('users.deactivateAccount')}}">
+            @csrf
+            <button type="submit" class="deactivate">Deactivate Account</button>
+        </form>
         <div id="profilepic">
-        <img id="profilepic" src="profilepic.jpg">
+        <img id="profilepic" src="/media/profilepic.jpg">
         </div>
 
      <div id="custInfo">
-        
-        <div style="margin-top: 50px;">
-        <p>Name:</p><br><p id="proName"></p>
-        </div>
 
-        <div>
-        <p>Email:</p><br><p id="proEmail"></p>
-        </div>
+        <p>Name:</p><p id="proName">{{$user->name}}</p>
+        <p>Email:</p><p id="proEmail">{{$user->email}}</p>
+        <p>Account status:</p><p id="status">{{$user->status}}</p>
 
-        <div>
-        <p>Account status:</p> <br> <p id="status">Active</p>
-        </div>
-
+        <button role="button" onclick="window.location.href='{{route('users.editUsername')}}'">Change Username</button>
+        <button role="button" onclick="window.location.href='{{route('users.editPassword')}}'" style="float:right;">Change Password</button>
      </div>
-
     </div>
 
     <div class="subscription-box">
         <h1>Your Subscription:</h1>
-
-        <div>
-
-        <p>Ultimate Pass</p>
-        
-        <p>PC Game Pass</p>
-
-        <p>Game Pass</p>
-        
-        </div>
+        @if($subscription)
+            <p class="plan">{{$subscription->plan}}</p>
+            <p class="subPlan">Expires on {{\Carbon\Carbon::parse($subscription->end_date)->format('j M Y')}}</p>
+            @if($subscription->plan=='Ultimate Pass')
+                <button role="button" onclick="selectPlan('ultimateYear')">Renew</button>
+            @elseif($subscription->plan=='PC Game Pass')
+                <button role="button" onclick="selectPlan('standardYear')">Renew</button>
+            @elseif($subscription->plan=='Basic Pass')
+                <button role="button" onclick="selectPlan('basicMonth')">Renew</button>
+            @endif
+        @else
+            <p class="plan">No Active Subscription.</p>
+            <button role="button" onclick="selectPlan('ultimateYear')">Subscribe</button>
+        @endif
     </div>
 
     <div class="bill-box">
-        <h1>Bills:</h1>
+        <h1>Your Bills:</h1>
         <div>
-        
-        <p>Ultimate Pass (monthly)
-        <a href="../payment/receipt.html"><button  type="button" id="viewSecond">View</button></a>
-        </p>
-        
-        <p>PC Game Pass (yearly)
-        <a href="../payment/receipt.html"><button style="margin-left:20px;" type="button" id="viewSecond">View</button></a>
-        </p>
-        
-        <p>Game Pass (monthly)
-        <a href="../payment/receipt.html"><button style="margin-left:30px;" type="button" id="viewSecond">View</button></a>
-        </p>
+            @if($subs->isEmpty())
+                <p>No record found.</p>
+            @else
+                <table>
+                @foreach($subs as $sub)
+                    <tr>
+                        <td><p class="plan">{{$sub->plan}}</p><p class="subPlan">{{$sub->duration}}</p></td>
+                        <td><p class="plan">{{ \Carbon\Carbon::parse($sub->created_at)->addHours(8)->format('j M Y') }}</p>
+                        <p class="subPlan">{{ \Carbon\Carbon::parse($sub->created_at)->addHours(8)->format('H:i:s') }}</p></td>
+                        <td><button role="button" onclick="window.location.href='{{route('viewReceipt',$sub->id)}}'">View</button></td>
+                    </tr>
+                @endforeach
+                </table>
+            @endif
         </div>
-        
     </div>
 
     </div>
- 
-
-    <div id="includeFooter"></div>
+    @include('footer')
     </body>
 </html>

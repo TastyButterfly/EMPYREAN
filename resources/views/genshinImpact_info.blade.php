@@ -3,18 +3,15 @@
     <head>
         <meta charset="utf-8"/>
         <title>Genshin Impact</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <link href="/css/link_page.css" rel="stylesheet">
     </head>
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="container">
-            <video src="ee4bd2d72b7446aab4aa63019373449d_2578887134885281577.mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+            <video src="/media/ee4bd2d72b7446aab4aa63019373449d_2578887134885281577.mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
             <div class="text-block">
                 <div>
-                    <img src="Genshin_Impact_logo.svg.png" style="width: 160px; height:55px; padding-left: 35%; padding-top: 20px;">
+                    <img src="/media/Genshin_Impact_logo.svg.png" style="width: 160px; height:55px; padding-left: 35%; padding-top: 20px;">
                 </div>
                 <p> Genshin Impact takes place in the fantasy world of Teyvat, home to seven nations, each of which is tied to a different 
                     element and ruled by a different god. The story follows The Traveler, an interstellar adventurer who, at the start of the game, 
@@ -29,6 +26,6 @@
                     addition to exploration, the player can attempt various challenges for rewards.</p>
             </div>
         </div>
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>

@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Uni Sans Regular";
+    src: url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.eot");
+    src: url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/63984ad88beb718f38c1d880532ae1db.svg#Uni Sans Regular")format("svg");
+}
+
+
+h1.mainTitle{
+    font: bold 48px 'Gotham';
+    color: #182841;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding-left:35px;
+}
+table.mainTable{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 1% 5% 4% 5%;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.mainTable th, .mainTable td {
+    padding: 12px 15px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.mainTable th {
+    font: bold 18px 'Uni Sans Regular';
+    color: #000;
+    border-bottom: 2px solid #eee; /* Add border to table header */
+    background-color: #ddd;
+}
+
+.mainTable td {
+    font: lighter 16px 'Uni Sans Regular';
+    border-bottom: none; /* Remove border from table cells */
+}
+
+.mainTable tr:nth-child(odd) {
+    background-color: #eee; /* Optional: Add background color to even rows for better readability */
+}
+i{
+    transform: translateY(15px);
+}
+
+button.button-field{
+    margin:10px 20px 10px 0px;
+    color:white;
+    font:14px "G Sans";
+    height:30px;
+    width:90px;
+    border-radius: 20px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: transform .3s;
+}
+button.action{
+    background:#182841;
+}
+button.add{
+    margin:10px 0px 10px 40px;
+    height:40px;
+    width:160px;
+    font:16px "G Sans";
+    background:#13ac1d;
+}
+button.delete{
+    background:#CC3C3D;
+}
+
+button.button-field:hover{
+   transform: scale(1.25);
+}
+.actions{
+    display: flex;
+    justify-content:flex-start;
+    margin: 0 0.5%;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 25px 0px;
+    flex-direction: row;
+    font-size: 18px;
+    font-family: Gotham;
+    box-shadow: 0 10px 20px 0 rgba(black, 0.25);
+}
+
+.pagination .page-item {
+    margin: 0;
+}
+
+.pagination .page-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #182841;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background-color: #182841;
+    color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #182841;
+    color: #fff;
+    border-color: #182841;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+    background-color: #f9f9f9;
+}
+.pagination .page-item::marker {
+    content: none;
+}

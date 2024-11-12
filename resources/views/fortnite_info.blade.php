@@ -3,18 +3,15 @@
     <head>
         <meta charset="utf-8"/>
         <title>Fortnite</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <link href="/css/link_page.css" rel="stylesheet">
     </head>
 
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="descripfortnite" style="position:relative">
-            <img src="fortnite.png" style="width: 100%;">
+            <img src="/media/fortnite.png" style="width: 100%;">
             <div class="fortnitebox">
-                <img src="FortniteLogo.svg.png" style=" width: 200px; padding-top:20px; padding-left: 35%;">
+                <img src="/media/FortniteLogo.svg.png" style=" width: 200px; padding-top:20px; padding-left: 35%;">
             <div>
                 <p>
                     Fortnite is an online video game developed by Epic Games and released in 2017. It is available in three distinct game mode 
@@ -46,6 +43,6 @@
             </div>
             </div>
         </div>
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>

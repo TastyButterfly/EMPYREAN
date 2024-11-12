@@ -3,16 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>Crysis</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <link href="/css/link_page.css" rel="stylesheet">
     </head>
     <body>
-        <div id="includeNav"></div>
-            <img id="crysispic" src="crysis-descrip-hd.jpg" style="width: 100%;">
+            @include('nav')
+            <img id="crysispic" src="/media/crysis-descrip-hd.jpg" style="width: 100%;">
             <div class="descriptbox2" style="position:absolute; margin-top: 60px;">
-                <img src="Crysis_Logo.png" style="width: 180px; height:55px; padding-left: 30%; padding-top: 20px;">
+                <img src="/media/Crysis_Logo.png" style="width: 180px; height:55px; padding-left: 30%; padding-top: 20px;">
                 <p>
                     Characters in Crysis use nanosuits, advanced powered exoskeletons developed by the U.S. military that grants them special 
                     abilities through dedicated "modes", as well as the ability to switch between them at will. Nanosuit's "armor mode" 
@@ -31,6 +28,6 @@
                     to the player by default, acquired from picked-up weapons, or purchased in multiplayer.
                 </p>
             </div>
-            <div id="includeFooter"></div>
+            @include('footer')
     </body>
 </html>

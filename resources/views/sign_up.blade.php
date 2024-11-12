@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="/css/signup.css">
     <title>Sign Up</title>
-    <script type="text/javascript" src="../jquery.js"></script>
-    <script src="../include.js" type="text/javascript"></script>
-    <script src="../account.js"></script>
-    </head>
+</head>
 
 <body>
-<div id="includeNav"></div>
+@include('nav')
 <div class="container">
-    <div class="signup-box">
+    <div class="box">
         <h1 id="formTitle">Sign Up</h1>
-        <p>Get your Empyrean account now</p>
-        <form>
+        <p>Get your Empyrean account now!</p>
+        @if($errors->any())
+            <div class="error-messages">
+                <ul style="list-style-type: none;">
+                    @foreach($errors->all() as $error)
+                        <li style="color:#f93b38;">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form id="signupForm" method="POST" action="{{route('users.register')}}">
+            @csrf
             <div class="input-group" id="nameField">
 
             <div class="input-field">
             <p>&#9729;</p>
-            <input type="text" placeholder="Name" id="name">
+            <input type="text" name="name" placeholder="Username" id="name" value="{{old('name')}}" required>
             </div>
 
             <div class="input-field">
             <p>&#9993;</p>
-            <input type="email" placeholder="Email" id="email">
+            <input type="email" placeholder="Email" name="email" id="email" value="{{old('email')}}" required>
             </div>
 
             <div class="input-field">
             <p>&#128272;</p>
-            <input type="password" placeholder="Password" id="password">
+            <input type="password" name="password" placeholder="Password" id="password" required>
             </div>
 
             <div class="input-field">
             <p>&#128272;</p>
-            <input type="password" placeholder="Confirm your Password" id="cpassword">          
+            <input type="password" name="password_confirmation" placeholder="Confirm your Password" id="cpassword" required>          
             </div>
 
-            <p id="message">Already have an account?&nbsp;<a href="../signin/sign_in.html">Sign In</a></p>
+            <p id="message">Already have an account?&nbsp;<a href="{{url('/sign_in')}}">Sign In</a></p>
 
             <div class="button-field">
-                <button id="signupBtn" type="submit" onclick="register()">Sign Up</button>
+                <button id="signupBtn" type="submit" ><a id="signLink">Sign Up</a></button>
             </div>  
             </div>
         </form>
@@ -49,9 +56,7 @@
     </div>
 </div>
 
-<div id="includeFooter"></div>
+@include('footer')
 </body>
-
-
 </html>  
        

@@ -82,3 +82,7 @@
   .reveal.scroll.active{
     display:none;
   }
+  .footerBlank{
+    height: 100px;
+    width:100%;
+ }

@@ -2,38 +2,40 @@
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <link rel="stylesheet" href="signin.css">
-    <script src="../jquery.js"></script>
-    <script src="../include.js" type="text/javascript"></script>
-    <script src="../account.js"></script>
+    <link rel="stylesheet" href="/css/signin.css">
     <title>Sign In</title>
     </head>
   
 <body>
-    <div id="includeNav"></div>
+    @include('nav')
 <div id="signinpage">
 <div class="signin_container">
     <div class="signin-box">
         <h1 id=""formTitle>Sign In</h1>
         <p>Welcome back to Empyrean</p>
-        <form>
-            <div class="input-group" id="nameField" required>
-
+        @if(session('success'))
+            <p style="color:#30ab30">{{session('success')}}</p>
+        @endif
+        @if(session('error'))
+            <p style="color:#f93b38;">{{session('error')}}</p>
+        @endif
+        <form id="signinForm" method="POST" action="{{ route('users.validateUser') }}">
+            @csrf
             <div class="input-field">
             <p>&#9993;</p>
-            <input type="email" placeholder="Email" id="siemail" required>
+            <input type="email" name="email" placeholder="Email" id="siemail" required>
             </div>
 
             <div class="input-field">
             <p>&#128272;</p>
-            <input type="password" placeholder="Password" id="sipassword" required>
+            <input type="password" name="password" placeholder="Password" id="sipassword" required>
             </div>
 
-            <p id="message">Don't have an account?&nbsp;<a href="../signup/sign_up.html">Sign Up</a></p>
+            <p id="message">Don't have an account?&nbsp;<a href="sign_up">Sign Up</a></p>
 
-            <form action = "../profile/profile.html">
+            <form action = "profile">
             <div class="button-field">
-                <button type="submit" id="signinBtn" onclick="login()">Sign In</button>
+                <button type="submit" id="signinBtn"><a id="signIn">Sign In</a></button>
             </div>  
             </form>
             </div>
@@ -41,10 +43,8 @@
         
     </div>
 </div>
-
 </div>
-<div id="includeFooter"></div>
-
+@include('footer')
 </body>
 </html>  
        

@@ -10,7 +10,6 @@
     url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
  }
 
-#includeFooter{padding-top: 0px!important;} 
 
 *:not(.navbar *,footer *,.input-field *){
     margin:0;
@@ -22,7 +21,7 @@
 .signin_container{
     width:100%;
     height:100vh;
-    background-image:linear-gradient(rgba(133, 133, 210, 0.8),rgba(18, 18, 72, 0.8)), url(signinbg.png);
+    background-image:linear-gradient(rgba(133, 133, 210, 0.8),rgba(18, 18, 72, 0.8)), url(/media/signinbg.png);
     background-position: center;
     background-size:cover;
     position:relative; 
@@ -30,7 +29,7 @@
 
 .signin-box{
     height:50;
-    max-height:400px;
+    max-height:600px;
     width:100%;
     max-width:450px;
     position:absolute;
@@ -38,7 +37,7 @@
     left:50%;
     transform: translate(-50%,50%);
     background: white;
-    padding:50px 60px 70px;
+    padding:40px 60px 40px 60px;
     text-align: center;
     border-radius: 40px;
     box-shadow: 15px 10px rgba(255,255,255,0.3);

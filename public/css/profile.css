@@ -9,8 +9,16 @@
     url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
  }
+ @font-face {
+    font-family: "Gotham Pro";
+    src: url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.eot");
+    src: url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.svg#Gotham Pro Regular")format("svg");
+}
 
- #includeFooter{padding-top: 0px!important;} 
 
 *:not(.navbar *,footer *){
     margin:0;
@@ -22,7 +30,7 @@
 .container{
     width:100%;
     height:100vh;
-    background-image:linear-gradient(rgba(18, 18, 72, 0.8),rgba(18, 18, 72, 0.8)), url(profilebg.jpg);
+    background-image:linear-gradient(rgba(18, 18, 72, 0.8),rgba(18, 18, 72, 0.8)), url(/media/profilebg.jpg);
     background-position: center;
     background-size:cover;
     position:relative; 
@@ -33,11 +41,11 @@
     height:80%;
     max-width:450px;
     position:absolute;
-    bottom:50%;
+    bottom:49.5%;
     left:30%;
     transform: translate(-50%,50%);
     background: white;
-    padding:50px 50px 70px;
+    padding:20px 50px 30px 50px;
     text-align: center;
     border-radius: 40px;
 }
@@ -51,78 +59,108 @@
     padding-top: 3px;
 }
 
-h1 
-{
-    text-align: left;
-    font-size: 20px;
-}
+
 img#profilepic
 {
     border-radius:50%;
     height:200px;
     width:200px;
-    
+    margin-top:10px;
 }
 
 div#custInfo
 {
     text-align: left;
+    position:absolute;
+    bottom:1%;
+    width:75%;
 }
 
-div#custInfo div
+div#custInfo p
 {
-    margin:15px;
+    margin:10px;
 }
 
 .subscription-box{
     width:100%;
-    height:35%;
+    height:23%;
     max-width:450px;
     position:absolute;
-    bottom:69%;
+    bottom:77.5%;
     left:65%;
     transform: translate(-50%,50%);
     background: white;
-    padding:50px;
+    padding:27px;
     text-align: center;
     border-radius: 40px;
 }
-
-.subscription-box p{
-    margin:20px;
-    padding:10px;
+.subscription-box button{
     height:40px;
-    border-radius: 30px;
-    background-color: beige;
+    width:90px;
+    border-radius: 40px;
+    font-size:14px;
 }
-
-.subscription-box div{
-    width:90%;
-    height:70%;
-    overflow: auto;
+.subscription-box h1, .bill-box h1, .profile-box h1{
+    text-align: left;
+    font-size: 24px;
+    margin:10px 0px;
 }
-
+.subscription-box p{
+    width:60%;
+    text-align:left;
+    float:left;
+}
+.subscription-box p.plan{
+    margin:5px;
+    font: 22px "Gotham Pro";
+}
+.subscription-box p.subPlan{
+    margin-left:5px;
+    font-size: 13px;
+    color:#888;
+}
+.bill-box p.plan{
+    font:20px "Gotham Pro";
+    padding-bottom: 5px;
+}
+.bill-box p.subPlan{
+    font-size: 14px;
+    color:#777;
+}
 .bill-box{
     width:100%;
-    height:35%;
+    height:43%;
     max-width:450px;
     position:absolute;
-    bottom:30%;
+    bottom:31%;
     left:65%;
     transform: translate(-50%,50%);
     background: white;
-    padding:50px;
+    padding:27px;
     text-align: center;
     border-radius: 40px;
 }
-
+.bill-box table{
+    width:100%;
+    height:100%;
+    text-align: left;
+    padding:5px;
+}
+.bill-box table td{
+    vertical-align: top;
+}
 .bill-box div{
-    width:90%;
+    width:100%;
     height:70%;
     overflow: auto;
 }
-
-.bill-box button{
+.bill-box table button{
+    height:35px;
+    width:80%;
+    font-size:13px;
+    border-radius:35px;
+}
+.bill-box button, .subscription-box button, .profile-box button{
     margin:10px;
     padding:10px;
     border-radius:20px;
@@ -130,12 +168,22 @@ div#custInfo div
     border: none;
     color:white; 
     transition: transform .3s;
-    
 }
-
-.bill-box button:hover{
+.bill-box button:hover, .subscription-box button:hover, .profile-box button:hover{
    transform: scale(1.25);
    box-shadow: 5px -5px gray;
+}
+.profile-box button{
+    height:40px;
+    width:145px;
+    font-size:14px;
+}
+button.deactivate{
+    position:absolute;
+    font-weight: bold;
+    background-color: #8F0B0B;
+    bottom:87%;
+    left:60%;
 }
 
 

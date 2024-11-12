@@ -3,17 +3,14 @@
     <head>
         <meta charset="utf-8"/>
         <title>Support</title>
-        <link href="support.css" rel="stylesheet"/>
+        <link href="/css/support.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
     </head>
 
     <body style="margin:0px 0px 0px 0px;">
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="wrapper">
             <h1>FAQ</h1>
 
@@ -44,7 +41,7 @@
                 </button>
                 <div class="pannel">
                     <p>Empyrean follows local content-rating agencies. We try to have all supported games available in all
-                         countries, but some games are prohibited in some countries. Visit Game Library to see which tittles are available.</p>
+                         countries, but some games are prohibited in some countries. Visit Game Library to see which titles are available.</p>
                 </div>
             </div>
 
@@ -54,7 +51,7 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="pannel">
-                    <p>Please visit <a href="../requirements/s.requirement.html"><b>System Requirements</b></a> for info on system requirements, including internet speed.</p>
+                    <p>Please visit <a href="srequirement"><b>System Requirements</b></a> for info on system requirements, including internet speed.</p>
                 </div>
             </div>
 
@@ -93,16 +90,16 @@
                                         <input type="tel" id="phone" name="phone" size="10" maxlength="8" placeholder="nnn-nnnn" pattern="[0-9]{8}">
 
                                         <datalist id="areacode">
-                                            <option value="010" />
-                                            <option value="011" />
-                                            <option value="012" />
-                                            <option value="013" />
-                                            <option value="014" />
-                                            <option value="015" />
-                                            <option value="016" />
-                                            <option value="017" />
-                                            <option value="018" />
-                                            <option value="019" />
+                                            <option value="010">
+                                            <option value="011">
+                                            <option value="012">
+                                            <option value="013">
+                                            <option value="014">
+                                            <option value="015">
+                                            <option value="016">
+                                            <option value="017">
+                                            <option value="018">
+                                            <option value="019">
                                         </datalist>
                                     </td>
                                 </tr>
@@ -188,6 +185,6 @@
             }
         </script>
 
-<div id="includeFooter"></div>
+@include('footer')
     </body>
 </html>

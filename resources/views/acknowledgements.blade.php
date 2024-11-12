@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="ack.css" rel="stylesheet">
+  <link href="/css/ack.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../jquery.js"></script><!--jquery is a library-->
-  <script src="../include.js"></script>
-  <script src="ack.js"></script>
+  <script src="/js/ack.js"></script>
 </head>
 <body>
-  <div id="includeNav"></div><!--includes navbar-->
+  @include('nav')
   <div class="container">
-    <img src="sky.jpg" alt="Acknowledgements" style="width:100%;height:250px;">
+    <img src="/media/sky.jpg" alt="Acknowledgements" style="width:100%;height:250px;">
     <div class="centered">Acknowledgements</div>
   </div>
   <div class="title">
@@ -21,7 +19,7 @@
   <div class="pbg reveal"><p class="reveal up para">Font Awesome is a spectacular website that provides icons for use in websites. What
     differs them from the rest is that their logos have truly transparent backgrounds and act like text, giving them unparalleled flexibility.
     What's more is that they have an absolutely large library of icons to choose from, tailoring to almost every possible scenario. As if that's
-    not enough, all the essentials are provided ABSOLUTELY FREE! without any charge, supporting smaller developers like us without needing
+    not enough, all the essentials are provided ABSOLUTELY FREE! Without any charge, supporting smaller developers like us without needing
     to pay a hefty fee annually, encouraging us to build further. Lastly, all of their icons have respective variations, providing more choices.
     For example, they have solid and hollow icons to choose from.
   </p></div>
@@ -68,5 +66,5 @@
      amount of indebtedness from us, all of us.
   </p></div>
 </body>
-<div id="includeFooter"></div>
+@include('footer')
 </html>

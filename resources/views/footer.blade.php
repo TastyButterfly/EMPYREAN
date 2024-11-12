@@ -5,6 +5,7 @@
         <!--ABOVE IS TO IMPORT SOCIAL MEDIA SYMBOLS-->
     </head>
     <footer>
+        <div style="height:30px;width:100%;background-color:#182841"></div>
         <div id="company">
             <img src="/media/image.png" width="100px" height="100px" class="footer">
             <br><h1 class="footer">EMPYREAN <span class="footer">inc.</span></h1>
@@ -26,19 +27,19 @@
                     <th>Support<hr></th>
                 </tr>
                 <tr>
-                    <td onclick="location.href='../game-pass/buyingPass.html'">Subscription Plans</td>
-                    <td onclick="location.href='../aboutUs/AboutUs.html'">About Us</td>
-                    <td onclick="location.href='../support/support.html'">Common Problems/FAQ</td>
+                    <td onclick="location.href='{{url('buyingPass')}}'">Subscription Plans</td>
+                    <td onclick="location.href='{{url('/aboutUs')}}'">About Us</td>
+                    <td onclick="location.href='{{url('/support')}}'">Common Problems/FAQ</td>
                 </tr>
                 <tr>
-                    <td onclick="location.href='../gamelibrary/gamelibrary.html'">Game Library</td>
-                    <td onclick="location.href='../acknowledgement/acknowledgements.html'">Acknowledgements</td>
-                    <td onclick="location.href='../instructions/instructions.html'">Instructions</td>
+                    <td onclick="location.href='{{url('/gamelibrary')}}'">Game Library</td>
+                    <td onclick="location.href='{{url('/acknowledgements')}}'">Acknowledgements</td>
+                    <td onclick="location.href='{{url('/instructions')}}'">Instructions</td>
                 </tr>
                 <tr>
                     <td class="notd"></td>
-                    <td onclick="location.href='../requirements/s.rwindowpc.html'">Requirements</td>
-                    <td onclick="location.href='../legal/legal.html'">Legal</a></td>
+                    <td onclick="location.href='{{url('/srwindowpc')}}'">Requirements</td>
+                    <td onclick="location.href='{{url('/legal')}}'">Legal</a></td>
                 </tr>
             </table>
         </div>

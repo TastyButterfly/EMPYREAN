@@ -9,8 +9,47 @@
 }
 
 @font-face {
-    font-family: Space;
-    src: url(../fonts/SpaceCrusaders-x3DP0.ttf) format(truetype);
+    font-family: "Gotham Pro";
+    src: url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.eot");
+    src: url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/07a38bbad54db72a40b406bed1c72f53.svg#Gotham Pro Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Space Crusaders";
+    src: url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.eot");
+    src: url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1a9d8a355bdb917c91843d7d537928ae.svg#Space Crusaders")format("svg");
+}
+
+@media print {
+    body, .first, .first * {
+        background-color: white !important;
+        -webkit-print-color-adjust: exact; 
+    }
+    body * {
+        visibility: hidden;
+    }
+    .first, .first * {
+        background-color: white;
+        visibility: visible;
+    }
+    .first {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateX(120px);
+        left:0; 
+        top: 0px;
+        width: 100%;
+    }
 }
 
 body {
@@ -18,8 +57,10 @@ body {
     margin:0;
     padding:0;
 }
-
-p {
+.product2, .duration{
+    display:inline-block;
+}
+table.first p:not(.product2):not(.thanks) {
     font-family:"Google Sans Text Regular";
     text-align: center;
 }
@@ -42,7 +83,9 @@ p {
     align-items: center;
     margin-top:20px;
 }
-
+.prodRow{
+    border-spacing:15px;
+}
 .container img {
     padding-bottom: 10px;;
 }
@@ -76,21 +119,27 @@ table.first {
 }
 .product {
     float:left;
-    margin-left:50px;
+    margin-left:31px;
     margin-top:10px;
     height:5px;
     font-weight: bold;
 }
 
-.product2 {
+.product2,.duration {
     float:left;
-    margin-left:50px;
-    margin-top:15px; 
+    margin:2px 30px;
+}
+.duration{
+    font-size: 12px;
+    color:#888;
+}
+.product2{
+    font:18px "Gotham Pro" !important;
 }
 
 .price {
     float:right;
-    margin-right:108px;
+    margin-right:49px;
     margin-top:10px;
     height:5px;
     font-weight: bold;
@@ -104,5 +153,37 @@ table.first {
 
 .thanks p{
     font-size:40px;
-    font-family: Space;
+    font-family: "Space Crusaders" !important;
 }
+.total .price2{
+    font-weight: bold;
+}
+.button-container {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+.button-container .receipt {
+    display:block;
+    margin-left: 10px;
+}
+button.receipt{
+    background:#241571;
+    color:white;
+    height:50px;
+    width:200px;
+    border-radius: 40px;
+    margin:50px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: background 1s;
+    font-size: large;
+    transition: transform .3s; /* Animation */
+    font-family: "Google Sans Text Regular";
+ }
+ button.receipt:hover{
+    box-shadow: 15px -10px gray;
+    font-weight: bold;
+    transform: scale(1.25);
+ }

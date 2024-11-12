@@ -3,18 +3,16 @@
     <head>
         <meta charset="utf-8"/>
         <title>Game Pass</title>
-        <link href="game_pass.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <link href="/css/game_pass.css" rel="stylesheet">
+        <script src="/js/buyingPass.js"></script>
     </head>
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="title">
             <h1>Catch up with our NEWEST game!</h1>
         </div>
         <div>
-            <img src="partyAnimal.jpg" style="width: 100%"/>
+            <img src="/media/partyAnimal.jpg" style="width: 100%"/>
         </div>
         <div>
             <h1>PARTY LIKE AN ANIMAL</h1>
@@ -30,19 +28,19 @@
         </div>
         <div class="image-container" style="box-sizing: border-box">
             <div class="gameplay">
-                <img src="partyAnimal-gameplay1.jpg" style="width: 100%; height: 100%"><br><br>
+                <img src="media/partyAnimal-gameplay1.jpg" style="width: 100%; height: 100%"><br><br>
             </div>
             <div class="gameplay">
-                <img src="partyAnimal-gameplay2.jpg" style="width: 100%; height: 100%"><br><br>
+                <img src="media/partyAnimal-gameplay2.jpg" style="width: 100%; height: 100%"><br><br>
             </div>
             <div class="gameplay">
-                <img src="partyAnimal-gameplay3.jpg" style="width: 100%; height: 100%"><br><br>
+                <img src="media/partyAnimal-gameplay3.jpg" style="width: 100%; height: 100%"><br><br>
             </div>
             <div class="gameplay">
-                <img src="partyAnimal-gameplay4.jpg" style="width: 100%; height: 100%"><br><br>
+                <img src="media/partyAnimal-gameplay4.jpg" style="width: 100%; height: 100%"><br><br>
             </div>
             <div class="gameplay">
-                <img src="partyAnimal-gameplay5.jpg" style="width: 100%; height: 100%"><br><br>
+                <img src="media/partyAnimal-gameplay5.jpg" style="width: 100%; height: 100%"><br><br>
             </div>
         </div>
 
@@ -76,7 +74,7 @@
             <h1>About the game</h1><br>
         </div>
         <div class="aboutGame">
-            <img src="partyAnimalDeluxe2.1fa3172f-9d13-4764-a1a4-71c7984b8a22.jpg" style="width: 300px; float: left; padding-left: 200px">
+            <img src="media/partyAnimalDeluxe2.1fa3172f-9d13-4764-a1a4-71c7984b8a22.jpg" style="width: 300px; float: left; padding-left: 200px">
             <h2 style="float: left; padding-left: 60px">Party Animals Deluxe Edition</h2>
             <p style="float: left; text-align: left; padding-left: 60px">
                 Purchase the Deluxe Edition to receive the following exclusive content:
@@ -96,30 +94,24 @@
         </div>
         <table class="threePasses" style="padding-left: 10%;">
             <tr>
-                <td class="rectangle" >
-                    <h3>PC Game pass</h3>
-                    <p>PC Game Pass unlocks a large catalog of PC games</p>
-                    <a href="" target="_blank"> <!--link to payment page-->
-                        <a href="../payment/Payment1.html"><input type="button" class="click" value="Get"></a>
-                    </a>
+                <td class="rectangle">
+                    <h3>Basic Pass</h3>
+                    <p>Enabling online play on consoles and access to a small library of specific games with our cloud system.</p>
+                    <input type="button" class="click" value="Get" onclick="selectPlan('basicYear')">
                     <td class="rectangle">
-                        <h3>Ultimate pass</h3>
+                        <h3>Ultimate Pass</h3>
                         <p>The top-tier service includes online multiplayer on consoles, both the console and PC game catalogs, 
                             plus the newest updated game (*may change every week)<br><br><b>Party Animals Deluxe Edition</b></p>
-                        <a href="" target="_blank"> <!--link to payment page-->
-                            <a href="../payment/Payment1.html"><input type="button" class="click" value="Get"></a>
-                        </a>
+                        <input type="button" class="click" value="Get" onclick="selectPlan('ultimateYear')">
                     </td>
                     <td class="rectangle">
-                        <h3>Basic</h3>
-                        <p>Enabling online play on consoles and access to a small library of specific games with our cloud system</p>
-                        <a href="" target="_blank"> <!--link to payment page-->
-                           <a href="../payment/Payment1.html"><input type="button" class="click" value="Get"></a>
-                        </a>
+                        <h3>PC Game Pass</h3>
+                        <p>In addition to all the perks in the basic pass, PC Game Pass unlocks a large catalog of PC games!</p>
+                        <input type="button" class="click" value="Get" onclick="selectPlan('standardYear')">
                     </td>
                 </td>
             </tr>
         </table>
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>

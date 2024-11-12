@@ -3,18 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Minecraft</title>
-        <link href="link_page.css" rel="stylesheet">
-        <script type="text/javascript" src="../jquery.js"></script>
-        <script src="../include.js" type="text/javascript"></script>
-        <script src="../account.js"></script>
+        <link href="/css/link_page.css" rel="stylesheet">
     </head>
     <body>
-        <div id="includeNav"></div>
+        @include('nav')
         <div class="descripminecraft" style="position:relative">
-            <img src="minecraft-description.jpg" alt="minecraft" style="width: 100%">
+            <img src="/media/minecraft-description.jpg" alt="minecraft" style="width: 100%">
             <div class="minecraftbox">
                 
-                <p style="margin-top: 20px;;"><video id="vid" src="copy_8D78CB1A-584F-4548-B0EB-E6EE009D83B2.mov" muted="muted" autoplay="autoplay" loop="loop" style="margin-right:15px; float:left; width: 400px;"></video>
+                <p style="margin-top: 20px;;"><video id="vid" src="/media/copy_8D78CB1A-584F-4548-B0EB-E6EE009D83B2.mov" muted="muted" autoplay="autoplay" loop="loop" style="margin-right:15px; float:left; width: 400px;"></video>
                     Minecraft, created by Mojang and Microsoft in 2017, is a game where you can explore, build, and survive in a unique blocky
                      world. In the first of the games two modes, called Creative Mode, you have limitless resources at your disposal and can 
                      construct whatever you can think of. There are countless choices, ranging from massive palaces. The focus of Survival 
@@ -40,6 +37,6 @@
                 </p>
             </div>
         </div>
-        <div id="includeFooter"></div>
+        @include('footer')
     </body>
 </html>
