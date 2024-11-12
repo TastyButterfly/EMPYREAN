@@ -5,6 +5,8 @@
         <title>Game Pass</title>
         <link href="/css/game_pass.css" rel="stylesheet">
         <script src="/js/buyingPass.js"></script>
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
     <body>
         @include('nav')

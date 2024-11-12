@@ -4,6 +4,8 @@
         <meta charset="utf-8"/>
         <link href="/css/srequirement.css" rel="stylesheet"/>
         <title>Windows Requirements</title>
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
     <body>
         @include('nav')

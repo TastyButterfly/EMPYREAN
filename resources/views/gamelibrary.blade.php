@@ -4,6 +4,8 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="/css/glibrary.css">
         <title>Empyrean Game Library</title>
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
 
     <body>

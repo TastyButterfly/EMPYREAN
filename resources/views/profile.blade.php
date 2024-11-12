@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="/css/profile.css">
         <title>Empyrean Profile</title>
         <script src="/js/buyingPass.js"></script>
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
     <body>
     

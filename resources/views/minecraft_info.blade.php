@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Minecraft</title>
         <link href="/css/link_page.css" rel="stylesheet">
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
     <body>
         @include('nav')

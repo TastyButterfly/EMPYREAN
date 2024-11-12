@@ -10,7 +10,8 @@
             background-image: url(/media/admin_wp.jpg);
         }
     </style>
-  
+    <link rel="icon" href="/media/image.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
 <body>
     @include('nav')
     <div id="signinpage">

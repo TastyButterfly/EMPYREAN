@@ -4,6 +4,9 @@
   <link href="/css/ack.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="/js/ack.js"></script>
+  <link rel="icon" href="/media/image.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
+  <title>Acknowledgements</title>
 </head>
 <body>
   @include('nav')

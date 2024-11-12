@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="/css/signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <title>Deactivate Account</title>
+    <link rel="icon" href="/media/image.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
 </head>
 
 <body>

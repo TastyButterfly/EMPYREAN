@@ -5,6 +5,8 @@
         <title>Admin Dashboard</title>
         <link href="/css/admin.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/media/image.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
     </head>
     @include('nav')
     <body>

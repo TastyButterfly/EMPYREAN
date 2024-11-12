@@ -6,6 +6,8 @@
     <script src="/js/account.js"></script>
     <title>EMPYREAN</title>
     </head>
+    <link rel="icon" href="/media/image.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/image.ico" type="image/x-icon">
 <body>
 @include('nav')
 <div id="home">
