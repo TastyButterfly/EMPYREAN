@@ -29,7 +29,7 @@
         <tr>
             @if(isset($subscription_data))
             <td>{{$subscription_data['plan']}} @if($subscription_data['extend'] == 1) (Plan Extension) @endif
-                <p>Starts {{\Carbon\Carbon::parse($subscription_data['start_date'])->format('d M Y') }}, ends after {{ \Carbon\Carbon::parse($subscription_data['end_date'])->format('d M Y') }}</p>
+                <p>Starts {{\Carbon\Carbon::parse($subscription_data['start_date'])->format('d M Y') }}, ends {{ \Carbon\Carbon::parse($subscription_data['end_date'])->format('d M Y') }}</p>
             </td>
             <td>{{$subscription_data['duration']}}</td>
             <td>RM {{$subscription_data['price']}}.00</td>

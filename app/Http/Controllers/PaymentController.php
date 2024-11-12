@@ -167,7 +167,7 @@ class PaymentController extends Controller
             $startDate = Carbon::now()->setTimezone('Asia/Singapore');
         }
         elseif($existingSubscription!=null && $existingSubscription->plan==$plan){//if user is renewing subscription
-            $startDate = $existingSubscription->end_date->copy()->addDay();
+            $startDate = $existingSubscription->end_date;
         }
         else{
             $startDate = Carbon::now()->setTimezone('Asia/Singapore');
@@ -180,9 +180,6 @@ class PaymentController extends Controller
         }
         else{
             return redirect()->route('subscribe')->with('error', 'Unknown error.');
-        }
-        if ($existingSubscription != null && $existingSubscription->plan == $plan) {
-            $endDate->subDay();
         }
         $startDate = $startDate->toDateString();
         $endDate = $endDate->toDateString();

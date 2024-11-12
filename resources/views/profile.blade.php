@@ -35,7 +35,7 @@
         <h1>Your Subscription:</h1>
         @if($subscription)
             <p class="plan">{{$subscription->plan}}</p>
-            <p class="subPlan">Expires after {{\Carbon\Carbon::parse($subscription->end_date)->format('j M Y')}}</p>
+            <p class="subPlan">Expires on {{\Carbon\Carbon::parse($subscription->end_date)->format('j M Y')}}</p>
             @if($subscription->plan=='Ultimate Pass')
                 <button role="button" onclick="selectPlan('ultimateYear')">Renew</button>
             @elseif($subscription->plan=='PC Game Pass')
