@@ -156,7 +156,7 @@ class SubscriptionController extends Controller
                 $startDate = Carbon::now()->setTimezone('Asia/Singapore');
             } else {
                 $extend=1;
-                $startDate = $existingSubscription->end_date;
+                $startDate = $existingSubscription->end_date->copy()->addDay();
                 $price = $this->setPrice(['plan' => $plan, 'duration' => $duration]);
                 $total=$price;
             }
@@ -173,6 +173,9 @@ class SubscriptionController extends Controller
         }
         else{
             $endDate = null;
+        }
+        if ($existingSubscription != null && $existingSubscription->plan == $plan) {
+            $endDate->subDay();
         }
         $startDate = $startDate->toDateString();
         $endDate = $endDate->toDateString();
