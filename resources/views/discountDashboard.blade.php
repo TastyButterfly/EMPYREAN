@@ -49,6 +49,8 @@
         <div class="pagination">
             {{ $discounts->links() }}
         </div>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p class="warning">NOTE: Changes to this table will NOT be reflected to the payments table. You are advised, upon any changes made here, to edit the payments table accordingly to prevent any data inconsistencies.</p>
         @include('footer')
     </body>
 </html>

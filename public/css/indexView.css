@@ -150,3 +150,12 @@ button.search{
     position:absolute;
     display:inline;
 }
+p.warning{
+    font: 16px 'G Sans';
+    padding:5px 20px;
+}
+i.fa-triangle-exclamation{
+    color: #eeaf04;
+    font-size: 40px;
+    padding: 5px 20px;
+}
