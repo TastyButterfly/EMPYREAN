@@ -12,6 +12,7 @@
   <div class="top">
         <h1>Subscribe!</h1>
     <p>Choose from our series of attractive plans with flexible pricing!</b></p>
+    <p>*All prices are inclusive of 6% SST</p>
 </div>
 
     <form action="{{route('subscriptions.submit')}}" method="POST">
@@ -89,7 +90,6 @@
                 </div>
             </td>
         </tr>
-        <p>*All prices are inclusive of 6% SST</p>
         <tr class="result">
             <td  class="result">
                 <input type="submit" id="nextPage">

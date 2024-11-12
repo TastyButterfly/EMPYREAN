@@ -11,7 +11,7 @@
     @include('nav')
     <div class="button-container">
         <button type="button" class="receipt" onclick="window.print()">Print Receipt</button>
-        <button type="button" class="receipt back" onclick="window.location.href='/'">Back to Home</button>
+        <button type="button" class="receipt back" onclick="window.location.href='/profile'">Back to Profile</button>
     </div>
     <table class="first">
         <tr>

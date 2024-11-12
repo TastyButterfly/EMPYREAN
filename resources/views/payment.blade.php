@@ -18,7 +18,7 @@
 @include('nav')
 <div class="container">
     <div class="box" style="padding-bottom: 0%;">
-        <h1 id="formTitle">Payment Details</h1>
+        <h1 id="formTitle">Subscription Details</h1>
 <form id="paymentForm" action="{{route('payments.pay')}}" method="POST">
     @csrf
     <table class="paymentItem">
@@ -52,8 +52,7 @@
         <h2>Grand Total: RM {{number_format($subscription_data['total'],2)}}</h2>
         <input type="hidden" name="plan" value="{{$subscription_data['plan']}}">
         <input type="hidden" name="duration" value="{{$subscription_data['duration']}}">
-        <div id="card-element"></div>
-        <button type="submit">Submit</button>
+        <button type="submit">Checkout</button>
         <button type="button" onclick="window.location='{{route('payments.cancelPayment')}}';">Cancel</button>
     @else
         <h2>Grand Total: RM 0.00</h2>

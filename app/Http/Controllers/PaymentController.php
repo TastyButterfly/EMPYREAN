@@ -10,6 +10,10 @@ use App\Models\Discount;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Stripe\Stripe;
+use Stripe\Checkout\Session as StripeSession;
+use Stripe\PaymentIntent;
+use Stripe\PaymentMethod;
 
 class PaymentController extends Controller
 {
@@ -77,8 +81,58 @@ class PaymentController extends Controller
         ]);
         return redirect()->route('payments.index')->with('message', 'Payment updated successfully!');
     }
-    
-    public function pay(Request $request){
+    public function pay(Request $request)
+    {
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        $user = Auth::guard('user')->user();
+        $amount = $this->setPrice(['plan' => session('plan'), 'duration' => session('duration')])*100;
+        try {
+            // Create a Stripe Checkout Session
+            $checkoutSession = StripeSession::create([
+                'payment_method_types' => ['card'],
+                'line_items' => [[
+                    'price_data' => [
+                        'currency' => 'myr',
+                        'product_data' => [
+                            'name' => session('plan') .' '. session('duration') . ' Subscription',
+                        ],
+                        'unit_amount' => $amount,
+                    ],
+                    'quantity' => 1,
+                ]],
+                'mode' => 'payment',
+                'success_url' => route('payments.success', ['session_id' => '{CHECKOUT_SESSION_ID}']),
+                'cancel_url' => route('subscribe'),
+            ]);
+
+            // Store the checkout session ID in the session
+            session(['checkout_session_id' => $checkoutSession->id]);
+
+            // Redirect to the Stripe Checkout page
+            return redirect($checkoutSession->url);
+        } catch (\Exception $e) {
+            return redirect()->route('subscribe')->with('error', 'Payment failed! ' . $e->getMessage());
+        }
+    }
+    public function success(Request $request)
+    {
+        // Retrieve the checkout session ID from the request
+        $checkoutSessionId = session('checkout_session_id');
+
+        if (!$checkoutSessionId) {
+            return redirect()->route('subscribe')->with('error', 'Invalid session.');
+        }
+
+        // Retrieve the checkout session from Stripe
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        $checkoutSession = StripeSession::retrieve($checkoutSessionId);
+
+        // Retrieve the payment intent to get the payment method
+        $paymentIntent = PaymentIntent::retrieve($checkoutSession->payment_intent);
+        $paymentMethodID = $paymentIntent->payment_method;
+        $paymentMethodRec = PaymentMethod::retrieve($paymentMethodID);
+        $paymentMethod = $this->mapPaymentMethodType($paymentMethodRec->type);
         $plan=session('plan');
         $duration=session('duration');
         $user= Auth::guard('user')->user();
@@ -114,14 +168,14 @@ class PaymentController extends Controller
             $endDate = $startDate->copy()->addYear()->addDay();
         }
         else{
-            $endDate = null;
+            return redirect()->route('subscribe')->with('error', 'Unknown error.');
         }
         $startDate = $startDate->toDateString();
         $endDate = $endDate->toDateString();
         $payment= Payment::create([
             'user_id' => $user->id,
             'amount' => $total,
-            'payment_method' => 'Credit/Debit Card',
+            'payment_method' => $paymentMethod,
             'status' => $status,
             'payment_date' => $payment_date,
         ]);
@@ -271,5 +325,16 @@ class PaymentController extends Controller
             default:
                 return 0;
         }
+    }
+    private function mapPaymentMethodType($type)
+    {
+        $map = [
+            'card' => 'Credit/Debit Card',
+            'alipay' => 'AliPay',
+            'gpay' => 'GPay',
+            // Add other mappings as needed
+        ];
+
+        return $map[$type] ?? 'Unknown';
     }
 }

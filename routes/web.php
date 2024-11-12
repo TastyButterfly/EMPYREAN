@@ -97,6 +97,7 @@ Route::post('/submitSubscription', [SubscriptionController::class, 'submit'])->n
 Route::post('/pay', [PaymentController::class, 'pay'])->name('payments.pay');
 Route::post('/zeroPay', [SubscriptionController::class, 'zeroPayment'])->name('subscriptions.zeroPayment');
 Route::get('/receipt', [PaymentController::class, 'showReceipt'])->name('receipt');
+Route::get('/payments/success', [PaymentController::class, 'success'])->name('payments.success');
 
 //CANCEL BUTTON ROUTES
 Route::get('/user/cancel', [UserController::class, 'cancel'])->name('users.cancel');

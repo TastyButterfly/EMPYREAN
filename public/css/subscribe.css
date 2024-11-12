@@ -24,7 +24,7 @@ body {
     url("https://db.onlinewebfonts.com/t/41cdafd19e156a1f74759f9c88b878ff.svg#Google Sans Text Regular")format("svg");
 }
 
-p{
+table p, .top p{
     font-family: "Google Sans Text Regular";
     text-align: center;
     margin:10px;
@@ -103,7 +103,7 @@ label {
     rotate: -10deg;
 }
 
-button {
+table button {
     margin: 50px 0px 20px 85px;
 }
 
