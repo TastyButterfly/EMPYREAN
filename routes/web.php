@@ -20,9 +20,7 @@ use App\Http\Controllers\DiscountController;
 */
 
 //STATIC PAGES
-Route::get('/crysis_info', function(){
-    return view('crysis_info');
-});
+Route::get('/crysis_info', function(){return view('crysis_info');});
 Route::get('/fortnite_info', function(){
     return view('fortnite_info');
 });

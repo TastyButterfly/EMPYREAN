@@ -106,11 +106,8 @@ class UserController extends Controller
         else if($user && $user->status === 'Suspended') {
             return redirect()->back()->with('error', 'User account suspended. Please contact support for remediation.');
         }
-        else if($user) {
-            return redirect()->back()->with('error', 'Invalid credentials. Please try again.');
-        }
         else {
-            return redirect()->back()->with('error', 'User not found. Please sign up first.');
+            return redirect()->back()->with('error', 'Invalid credentials. Please try again.');
         }
     }
     public function register(Request $request){
@@ -167,11 +164,11 @@ class UserController extends Controller
     public function redirectToEditUsername()
     {
         $user = Auth::guard('user')->user();
-        if (!session()->has('editPWToken')) {
-            $editPWToken = bin2hex(random_bytes(32));
-            session(['editPWToken' => $editPWToken]);
+        if (!session()->has('editUNToken')) {
+            $editUNToken = bin2hex(random_bytes(32));
+            session(['editUNToken' => $editUNToken]);
         } else {
-            $editPWToken = session('editPWToken');
+            $editPWToken = session('editUNToken');
         }
         return view('editUsername', compact('user','editUNToken'));
     }
